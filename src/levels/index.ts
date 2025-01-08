@@ -1,0 +1,67 @@
+import { Level } from '../types/game';
+
+export const levels: Record<string, Level> = {
+  Easy: {
+    name: 'Easy',
+    targetPosition: { x: 1, y: 2 },
+    blocks: [
+      { id: 'target', width: 2, height: 2, x: 1, y: 0, isTarget: true },
+      { id: 'block1', width: 1, height: 2, x: 0, y: 0 },
+      { id: 'block2', width: 1, height: 2, x: 3, y: 0 },
+      { id: 'block3', width: 1, height: 1, x: 4, y: 0 },
+      { id: 'block4', width: 1, height: 1, x: 4, y: 1 },
+      { id: 'block5', width: 1, height: 1, x: 0, y: 2 },
+      { id: 'block6', width: 1, height: 1, x: 3, y: 2 },
+      { id: 'block7', width: 1, height: 1, x: 4, y: 2 },
+    ],
+  },
+  Medium: {
+    name: 'Medium',
+    targetPosition: { x: 1, y: 2 },
+    blocks: [
+      { id: 'target', width: 2, height: 2, x: 1, y: 0, isTarget: true },
+      { id: 'block1', width: 1, height: 2, x: 0, y: 0 },
+      { id: 'block2', width: 1, height: 2, x: 3, y: 0 },
+      { id: 'block3', width: 1, height: 2, x: 4, y: 0 },
+      { id: 'block4', width: 1, height: 1, x: 0, y: 2 },
+      { id: 'block5', width: 2, height: 1, x: 1, y: 2 },
+      { id: 'block6', width: 1, height: 1, x: 3, y: 2 },
+      { id: 'block7', width: 1, height: 1, x: 4, y: 2 },
+      { id: 'block8', width: 1, height: 1, x: 0, y: 3 },
+      { id: 'block9', width: 2, height: 1, x: 1, y: 3 },
+      { id: 'block10', width: 1, height: 1, x: 3, y: 3 },
+    ],
+  },
+  Hard: {
+    name: 'Hard',
+    targetPosition: { x: 1, y: 2 },
+    blocks: [
+      { id: 'target', width: 2, height: 2, x: 1, y: 0, isTarget: true },
+      { id: 'block1', width: 1, height: 2, x: 0, y: 0 },
+      { id: 'block2', width: 1, height: 2, x: 3, y: 0 },
+      { id: 'block3', width: 1, height: 2, x: 4, y: 0 },
+      { id: 'block4', width: 1, height: 2, x: 0, y: 2 },
+      { id: 'block5', width: 1, height: 2, x: 3, y: 2 },
+      { id: 'block6', width: 1, height: 2, x: 4, y: 2 },
+      { id: 'block7', width: 2, height: 1, x: 1, y: 2 },
+      { id: 'block8', width: 2, height: 1, x: 1, y: 3 },
+    ],
+  },
+  Expert: {
+    name: 'Expert',
+    targetPosition: { x: 1, y: 2 },
+    blocks: [
+      { id: 'target', width: 2, height: 2, x: 1, y: 0, isTarget: true },
+      { id: 'block1', width: 1, height: 2, x: 0, y: 0 },
+      { id: 'block2', width: 1, height: 2, x: 3, y: 0 },
+      { id: 'block3', width: 1, height: 2, x: 4, y: 0 },
+      { id: 'block4', width: 2, height: 1, x: 0, y: 2 },
+      { id: 'block5', width: 1, height: 1, x: 2, y: 2 },
+      { id: 'block6', width: 2, height: 1, x: 3, y: 2 },
+      { id: 'block7', width: 1, height: 1, x: 0, y: 3 },
+      { id: 'block8', width: 1, height: 1, x: 1, y: 3 },
+      { id: 'block9', width: 1, height: 1, x: 2, y: 3 },
+      { id: 'block10', width: 2, height: 1, x: 3, y: 3 },
+    ],
+  },
+};
