@@ -1,48 +1,89 @@
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f4f4f9;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
 .game-container {
-    text-align: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  overflow: auto;
 }
 
-#grid {
-    display: grid;
-    grid-template-columns: repeat(4, 50px);
-    grid-gap: 5px;
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(5, 60px);
+  grid-template-rows: repeat(4, 60px);
+  gap: 5px;
+  margin: 20px auto;
+  background-color: #ddd;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .block {
-    width: 50px;
-    height: 50px;
-    background-color: #3498db;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+  background-color: #007bff;
+  border: 2px solid #0056b3;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: white;
 }
 
-.large-block {
-    background-color: #e74c3c;
+.block.main {
+  background-color: #ff4d4d;
+  border-color: #cc0000;
 }
 
-.small-block {
-    background-color: #2ecc71;
+.block.exit {
+  background-color: transparent;
+  border: 2px dashed #007bff;
+}
+
+.controls {
+  margin-top: 20px;
 }
 
 button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 20px;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.win-message {
+  display: none;
+  margin-top: 20px;
+  font-size: 24px;
+  color: #28a745;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .game-board {
+    grid-template-columns: repeat(5, 50px);
+    grid-template-rows: repeat(4, 50px);
+  }
+
+  .block {
+    font-size: 12px;
+  }
 }

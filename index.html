@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Klotski Puzzle Game</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Klotski Puzzle Game</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="game-container">
-        <h1>Klotski Puzzle Game</h1>
-        <button id="reset-btn">Reset</button>
-        <div id="grid"></div>
-        <p>Move Counter: <span id="move-counter">0</span></p>
-        <p>Victory Message: <span id="victory-message" style="display:none;">Congratulations! You won in <span id="winning-moves"></span> moves!</span></p>
+  <div class="game-container">
+    <h1>Klotski Puzzle Game</h1>
+    <div class="game-board" id="game-board"></div>
+    <div class="controls">
+      <button id="reset-button">Reset</button>
+      <button id="undo-button">Undo</button>
+      <span>Moves: <span id="move-counter">0</span></span>
+      <span>Level: <span id="level-indicator">1</span></span>
     </div>
-    <script src="script.js"></script>
+    <div id="win-message" class="win-message">You Win!</div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
